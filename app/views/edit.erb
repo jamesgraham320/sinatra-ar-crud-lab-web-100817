@@ -1,0 +1,11 @@
+<h1>Edit an existing Post!</h1>
+<h2><%= @post.name %></h2>
+<h2><%= @post.content %></h2>
+<form method="post" action="/posts/<%=@post.id%>" class="new_post">
+  <input id="hidden" type="hidden" name="_method" value="patch">
+  <label for="name">Enter post name:</label>
+  <input type="text" name="name" id="name">
+  <label for="content">Enter post content:</label>
+  <input type="text" name="content" id="content">
+  <input type="submit" value="Edit Post" id="submit">
+</form>

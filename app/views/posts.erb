@@ -1,0 +1,10 @@
+<h1>Here are all your posts!</h1>
+<% Post.all.each do |post| %>
+  <h2><%= post.name %></h2>
+  <p><%= post.content%></p>
+  <p><%= post.id%></p>
+  <a href="/posts/<%=post.id%>">See this post!</a>
+<% end %>
+
+<br><br>
+<a href="/posts/new">Write a new Post!</a>
